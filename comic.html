@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GG&S Prologue & Chapter 14</title>
+
+<style>
+  :root {
+    --bg: #111;
+    --fg: #eee;
+    --banner-bg: #222;
+    --banner-fg: #fff;
+  }
+
+  body.light {
+    --bg: #fafafa;
+    --fg: #111;
+    --banner-bg: #e0e0e0;
+    --banner-fg: #111;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--banner-bg);
+    color: var(--banner-fg);
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .toggle-btn {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid var(--banner-fg);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--banner-fg);
+    font-size: 14px;
+  }
+
+  .comic-container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 70px; /* space for banner */
+  }
+
+  .comic-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--banner-bg);
+    color: var(--banner-fg);
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+    border: 1px solid var(--banner-fg);
+  }
+</style>
+</head>
+
+<body>
+  <div class="banner">
+    GG&S Prologue & Chapter 14
+    <button class="toggle-btn" onclick="toggleTheme()">Light/Dark</button>
+  </div>
+
+  <div class="comic-container">
+    <img src="scene_000.png" loading="lazy">
+    <img src="scene_001.png" loading="lazy">
+    <img src="scene_002.png" loading="lazy">
+    <img src="scene_003.png" loading="lazy">
+    <img src="scene_004.png" loading="lazy">
+    <img src="scene_005.png" loading="lazy">
+    <img src="scene_006.png" loading="lazy">
+    <img src="scene_007.png" loading="lazy">
+    <img src="scene_008.png" loading="lazy">
+    <img src="scene_009.png" loading="lazy">
+    <img src="scene_010.png" loading="lazy">
+    <img src="scene_011.png" loading="lazy">
+    <img src="scene_012.png" loading="lazy">
+    <img src="scene_013.png" loading="lazy">
+    <img src="scene_014.png" loading="lazy">
+    <img src="scene_015.png" loading="lazy">
+    <img src="scene_016.png" loading="lazy">
+    <img src="scene_017.png" loading="lazy">
+    <img src="scene_018.png" loading="lazy">
+    <img src="scene_019.png" loading="lazy">
+    <img src="scene_020.png" loading="lazy">
+    <img src="scene_021.png" loading="lazy">
+    <img src="scene_022.png" loading="lazy">
+    <img src="scene_023.png" loading="lazy">
+  </div>
+
+  <div id="backToTop" onclick="scrollToTop()">Back to top</div>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('backToTop');
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>
